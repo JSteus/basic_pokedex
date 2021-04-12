@@ -1,0 +1,92 @@
+.p-dialog-header {
+  background: #f90000 !important;
+  color: #fff !important;
+}
+
+.p-dialog-header-icon {
+  border: 1px solid white !important;
+}
+
+.p-dialog-header-close-icon {
+  color: #fff;
+}
+
+.p-dialog-content {
+  background: #f90000 !important;
+  padding: 5px !important;
+}
+
+.pokeBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.pokeHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.pokeTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d8d8d8;
+  padding: 0 5px 0 5px;
+}
+
+.pokeTitle h4 {
+  margin: 0;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.pokeHeader img {
+  border-radius: 100px;
+  width: 250px;
+}
+
+.pokeBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  border: 3px solid black;
+  border-radius: 5px;
+  color: black;
+  background-color: #e9e9e9;
+  /* padding: 15px; */
+}
+
+.pokeTags {
+  display: flex;
+}
+
+.pokeStats {
+  display: flex;
+  flex-direction: column;
+  background-color: #d8d8d8;
+}
+
+.pokeStats .statsrow {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pokeStats .statsrow p {
+  /* width: 20px; */
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+

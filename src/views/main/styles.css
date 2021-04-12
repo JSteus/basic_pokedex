@@ -1,0 +1,103 @@
+.outerContainer {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background-color: rgb(38, 38, 38);
+  align-items: center;
+  justify-content: center;
+}
+
+.pokeList {
+  width: 60%;
+  height: 80%;
+  /* border: 1px solid black; */
+  /* padding: 5px; */
+  /* border-radius: 10px; */
+  /* overflow: auto; */
+  border-radius: 10px;
+  border: 2px solid #666;
+  padding: 6px 0px;
+  background-color: #f5f5f5;
+}
+
+.pokeInner {
+  height: 100%;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+.pokeLogo {
+  width: 500px;
+  margin: 10px;
+}
+
+/* Modal */
+
+.notShow {
+  display: none;
+}
+
+.p-listbox {
+  background-color: #f5f5f5 !important;
+  border: none !important;
+}
+
+.p-listbox-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.templateContainer {
+  background: transparent;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-listbox-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px !important;
+  text-align: center !important;
+  width: 60% !important;
+  height: 40px !important;
+  background-color: black;
+  color: white !important;
+  border: 1px solid black !important;
+  margin: 2.5px 0 2.5px 0 !important;
+  -ms-transform: skew(-30deg) !important; /* IE 9 */
+  -webkit-transform: skew(-30deg) !important; /* Chrome, Safari, Opera */
+  transform: skew(-30deg) !important; /* Standard syntax */
+  transform-origin: bottom left !important; /* Prevent the bottom from shifting */
+}
+
+.p-listbox-item img {
+  transform: skew(30deg) !important;
+  -ms-transform: skew(30deg) !important;
+  -webkit-transform: skew(30deg) !important;
+}
+
+.p-listbox:not(.p-disabled)
+  .p-listbox-item:not(.p-highlight):not(.p-disabled):hover {
+  position: relative !important;
+  z-index: 1000 !important;
+  margin: -2.5px 0 -2.5px 0 !important;
+  font-weight: bold;
+  font-size: 20px;
+  background: #f90000 !important;
+  width: 70% !important;
+  height: 50px !important;
+  transition: width 100ms ease-in-out;
+}
+
+.templateContainer img :hover {
+  width: 30px;
+}
+
+/* .p-listbox-list-wrapper :hover {
+  background-color: #7b1506 !important;
+} */
