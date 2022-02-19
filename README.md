@@ -2,7 +2,6 @@
 > A recreation of the Pokedex inspired by various games in the Pokémon series.
 
 ## Table of Contents
-* [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Setup](#setup)
 * [Project Status](#project-status)
