@@ -1,16 +1,13 @@
 import React from "react"
-
-import "primereact/resources/themes/saga-blue/theme.css"
-import "primereact/resources/primereact.min.css"
-import "primeicons/primeicons.css"
-
 import ReactDOM from "react-dom"
-import "./index.css"
-import Main from "./views/main"
+
+import GlobalStyle from "./styles/global"
+import { Router } from "./router.js"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Main />
+    <GlobalStyle />
+    <Router />
   </React.StrictMode>,
   document.getElementById("root")
 )
