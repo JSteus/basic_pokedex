@@ -6,11 +6,11 @@ import { usePokemons } from "./usePokemons"
 const PokedexContext = createContext([])
 
 export function PokedexProvider({ children }) {
-  const { generations, generationLoading, generationError } = useGeneration()
+  const { generations, generationLoading } = useGeneration()
   const [currentGeneration, setCurrentGeneration] = useState("/pokedex/1")
   const [currentPokemon, setCurrentPokemon] = useState(null)
 
-  const { pokemons, pokemonsLoading, pokemonsError } =
+  const { pokemons, pokemonsLoading } =
     usePokemons(currentGeneration)
 
   const { mutate } = useSWRConfig()
@@ -29,7 +29,9 @@ export function PokedexProvider({ children }) {
       value={{
         pokedex: generations,
         selectGeneration,
+        generationLoading,
         selectPokemon,
+        pokemonsLoading,
         currentGeneration,
         currentPokemon,
         pokemons

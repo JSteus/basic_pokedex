@@ -26,4 +26,5 @@ export const PokeInnerContainer = styled.div`
   height: 100%;
   border-radius: 5px;
   overflow: hidden;
+  padding: 20px;
 `

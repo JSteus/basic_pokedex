@@ -9,11 +9,13 @@ const jump = keyframes`
 `
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 60%;
   align-items: center;
-  padding: 20px 0 0 20px;
+  justify-content: center;
+  padding-right: 20px;
 `
 
 export const RowContainer = styled.div`
@@ -110,7 +112,7 @@ export const FlavorTextContainer = styled.div`
   display: flex;
   width: 100%;
   height: 50%;
-  padding: 20px 0;
+  padding-top: 20px;
 `
 
 export const FlavorText = styled.div`

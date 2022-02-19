@@ -4,7 +4,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
-  padding: 20px 15px 0 15px; 
 `
 export const ListControls = styled.div`
   display: flex;
@@ -20,7 +19,6 @@ export const List = styled.ul`
   width: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-  z-index: 100;
 
   scrollbar-color: #222224 transparent;
 
@@ -80,7 +78,6 @@ export const Item = styled.li`
 
   &:hover {
     position: relative;
-    z-index: 1000;
     margin: 0;
     width: 350px;
     height: 50px;

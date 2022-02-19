@@ -9,7 +9,8 @@ import {
   formatSize,
   formatType
 } from "../../utils/index.js"
-import { TypeTag } from "../typeTag/styles.js"
+import { PokeLoading } from "../PokeLoading/index.js"
+import { TypeTag } from "../../styles/TypeTag.js"
 
 import {
   Container,
@@ -26,34 +27,34 @@ import {
   TitleContainer,
   TypeContainer
 } from "./styles.js"
+import { Placeholder } from "../../styles/Placeholder.js"
 
 function PokeView() {
   const { currentPokemon } = usePokedex()
-  const { details, detailsLoading, detailsError } = usePokemonDetails(
+  const { details, detailsLoading } = usePokemonDetails(
     currentPokemon?.name
   )
-  const { species, speciesLoading, speciesError } = usePokemonSpecies(
+  const { species, speciesLoading } = usePokemonSpecies(
     currentPokemon?.name
   )
 
-  const mounted = !detailsLoading && !speciesLoading
+  const loading = detailsLoading || speciesLoading
 
   const [isFront, setIsFront] = useState(true)
 
-  if (!currentPokemon) return <Container>vrau</Container>
+  if (!currentPokemon) return <Container><Placeholder>SELECT A POKÉMON</Placeholder></Container>
 
   return (
     <Container>
+      <PokeLoading isLoading={loading} />
       <RowContainer>
         <SpriteContainer>
-          {mounted && (
             <Sprite
               alt=""
               key={details?.name}
               onClick={() => setIsFront(!isFront)}
               src={isFront ? details?.front : details?.back}
             />
-          )}
         </SpriteContainer>
         <DescriptionContainer>
           <TitleContainer>
