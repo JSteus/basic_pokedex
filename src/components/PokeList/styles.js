@@ -4,6 +4,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+
+  @media (max-width: 960px) {
+    width: 100%;
+  }
 `
 export const ListControls = styled.div`
   display: flex;
@@ -22,23 +26,23 @@ export const List = styled.ul`
 
   scrollbar-color: #222224 transparent;
 
-      &::-webkit-scrollbar {
-        height: 12px;
-        width: 8px;
-      }
+  &::-webkit-scrollbar {
+    height: 12px;
+    width: 8px;
+  }
 
-      &::-webkit-scrollbar-track {
-        background: transparent;
-      }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-      &::-webkit-scrollbar-thumb {
-        background: #222224;
-        border-radius: 10px;
-      }
+  &::-webkit-scrollbar-thumb {
+    background: #222224;
+    border-radius: 10px;
+  }
 
-      &::-webkit-scrollbar-thumb:hover {
-        background: black;
-      }
+  &::-webkit-scrollbar-thumb:hover {
+    background: black;
+  }
 `
 
 export const TextContainer = styled.div`
@@ -50,6 +54,10 @@ export const Text = styled.h3`
   font-size: 1rem;
   white-space: nowrap;
   text-align: left;
+
+  @media (max-width: 960px) {
+    font-size: 0.7rem;
+  }
 `
 
 export const PokeBall = styled.img`
@@ -57,6 +65,10 @@ export const PokeBall = styled.img`
   transform: skew(30deg);
   -ms-transform: skew(30deg);
   -webkit-transform: skew(30deg);
+
+  @media (max-width: 960px) {
+    width: 20px;
+  }
 `
 
 export const Item = styled.li`
@@ -92,5 +104,10 @@ export const Item = styled.li`
     img {
       width: 40px;
     }
+  }
+
+  @media (max-width: 960px) {
+    height: 1.5rem;
+    width: 250px;
   }
 `

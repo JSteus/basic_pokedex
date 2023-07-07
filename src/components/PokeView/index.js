@@ -29,32 +29,34 @@ import {
 } from "./styles.js"
 import { Placeholder } from "../../styles/Placeholder.js"
 
-function PokeView() {
+export function PokeView({ mobile }) {
   const { currentPokemon } = usePokedex()
-  const { details, detailsLoading } = usePokemonDetails(
-    currentPokemon?.name
-  )
-  const { species, speciesLoading } = usePokemonSpecies(
-    currentPokemon?.name
-  )
+  const { details, detailsLoading } = usePokemonDetails(currentPokemon?.name)
+  const { species, speciesLoading } = usePokemonSpecies(currentPokemon?.name)
 
   const loading = detailsLoading || speciesLoading
 
   const [isFront, setIsFront] = useState(true)
 
-  if (!currentPokemon) return <Container><Placeholder>SELECT A POKÉMON</Placeholder></Container>
+  if (!currentPokemon) {
+    return (
+      <Container>
+        <Placeholder>SELECT A POKÉMON</Placeholder>
+      </Container>
+    )
+  }
 
   return (
     <Container>
-      <PokeLoading isLoading={loading} />
+      {!mobile && <PokeLoading isLoading={loading} />}
       <RowContainer>
         <SpriteContainer>
-            <Sprite
-              alt=""
-              key={details?.name}
-              onClick={() => setIsFront(!isFront)}
-              src={isFront ? details?.front : details?.back}
-            />
+          <Sprite
+            alt=""
+            key={details?.name}
+            onClick={() => setIsFront(!isFront)}
+            src={isFront ? details?.front : details?.back}
+          />
         </SpriteContainer>
         <DescriptionContainer>
           <TitleContainer>
@@ -89,5 +91,3 @@ function PokeView() {
     </Container>
   )
 }
-
-export default PokeView

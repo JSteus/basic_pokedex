@@ -16,6 +16,13 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding-right: 20px;
+
+  @media (max-width: 960px) {
+    padding-top: 3.5rem;
+    padding-right: 0px;
+    width: 100%;
+    overflow: auto;
+  }
 `
 
 export const RowContainer = styled.div`
@@ -23,12 +30,24 @@ export const RowContainer = styled.div`
   flex-direction: row;
   width: 100%;
   height: 50%;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export const SpriteContainer = styled.div`
   display: flex;
   align-items: center;
   width: 45%;
+
+  @media (max-width: 960px) {
+    width: 100%;
+    justify-content: center;
+  }
 `
 
 export const Sprite = styled.img`
@@ -45,6 +64,10 @@ export const DescriptionContainer = styled.div`
   width: 55%;
   background: #f0f0f0;
   border: 3px solid #222224;
+
+  @media (max-width: 960px) {
+    width: 100%;
+  }
 `
 
 export const TitleContainer = styled.div`
